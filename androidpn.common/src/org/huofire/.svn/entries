@@ -1,0 +1,35 @@
+10
+
+dir
+0
+http://192.168.0.22/svn/ssp/trunk/3G/Android/kdweibo.common/src/org/huofire
+http://192.168.0.22/svn/ssp
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d17ce728-492e-4e57-88c1-21616ddd93c3
+
+common
+dir
+
+
+
+add
+
