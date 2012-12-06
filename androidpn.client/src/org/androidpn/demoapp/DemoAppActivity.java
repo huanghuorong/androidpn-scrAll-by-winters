@@ -35,7 +35,7 @@ import android.widget.Button;
  * @author Sehwan Noh (devnoh@gmail.com)
  */
 public class DemoAppActivity extends Activity {
-
+	ServiceManager serviceManager = null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d("DemoAppActivity", "onCreate()...");
@@ -52,7 +52,7 @@ public class DemoAppActivity extends Activity {
         });
 
         // Start the service
-        ServiceManager serviceManager = new ServiceManager(this);
+        serviceManager = new ServiceManager(this);
         serviceManager.setNotificationIcon(R.drawable.notif_push_icon);
         serviceManager.startService();
     }
@@ -82,6 +82,7 @@ public class DemoAppActivity extends Activity {
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
 									int which) {
+								serviceManager.stopService();
 								if (android.os.Build.VERSION.SDK_INT > 7) {
 									System.exit(0);
 								} else {
